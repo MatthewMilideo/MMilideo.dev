@@ -233,7 +233,7 @@ function App() {
 	console.log(size, mobile);
 
 	return (
-		<Router>
+		<Router basename="/journal">
 			{mobile ? null : (
 				<React.Fragment>
 					<MainNav linkText={locations} mobile={mobile} />

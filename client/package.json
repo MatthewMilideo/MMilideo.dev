@@ -1,5 +1,6 @@
 {
   "name": "mmilideo.dev",
+  "homepage": "http://mmilideo.dev/journal",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
