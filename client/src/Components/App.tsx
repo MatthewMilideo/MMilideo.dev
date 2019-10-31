@@ -137,63 +137,63 @@ const locations = [
 const skillImages = [
 	{
 		id: 1,
-		src: "../media/react.png",
+		src: "../journal/media/react.png",
 		title: "React Logo",
 		desc: "React - 2 Years"
 	},
 	{
 		id: 2,
-		src: "../media/redux.png",
+		src: "../journal/media/redux.png",
 		title: "Redux Logo",
 		desc: "Redux - 2 Years"
 	},
 	{
 		id: 3,
-		src: "../media/html.png",
+		src: "../journal/media/html.png",
 		title: "HTML Logo",
 		desc: "HTML - 3 Years"
 	},
-	{ id: 4, src: "../media/css.png", title: "CSS3 Logo", desc: "CSS - 3 Years" },
+	{ id: 4, src: "../journal/media/css.png", title: "CSS3 Logo", desc: "CSS - 3 Years" },
 	{
 		id: 5,
-		src: "../media/bootstrap.svg",
+		src: "../journal/media/bootstrap.svg",
 		title: "Bootstrap Logo",
 		desc: "Bootstrap - 1 Year"
 	},
 
 	{
 		id: 8,
-		src: "../media/js.jpg",
+		src: "../journal/media/js.jpg",
 		title: "Javascript Logo",
 		desc: "Javascript ES6 - 2.5 Years"
 	},
 	{
 		id: 9,
-		src: "../media/TS.png",
+		src: "../journal/media/TS.png",
 		title: "TS Logo",
 		desc: "Typescript - Novice"
 	},
 	{
 		id: 6,
-		src: "../media/node.png",
+		src: "../journal/media/node.png",
 		title: "Node Logo",
 		desc: "Node / Express - 1 Year"
 	},
 	{
 		id: 7,
-		src: "../media/PGSQL.svg",
+		src: "../journal/media/PGSQL.svg",
 		title: "PostgreSQL Logo",
 		desc: "Postgre / SQL - 1 Year"
 	},
 	{
 		id: 10,
-		src: "../media/jest.png",
+		src: "../journal/media/jest.png",
 		title: "Jest Logo",
 		desc: "Jest - Novice"
 	},
 	{
 		id: 11,
-		src: "../media/sass.svg",
+		src: "../journal/media/sass.svg",
 		title: "SASS Logo",
 		desc: "SASS - Novice"
 	}
@@ -202,13 +202,13 @@ const skillImages = [
 const educationImages = [
 	{
 		id: "ed-2",
-		src: "../media/Stevens.png",
+		src: "../journal/media/Stevens.png",
 		title: "Stevens Institute of Technology",
 		desc: " Bachelors of Science in CS && Bachelors of Art in Literature"
 	},
 	{
 		id: "ed-1",
-		src: "../media/CMU.png",
+		src: "../journal/media/CMU.png",
 		title: "Carnegie Mellon University",
 		desc: "Masters of Art in Cultural Studies"
 	}
@@ -324,7 +324,7 @@ function App() {
 							<Col xs={6} sm={6} md={6} lg={6} className=" relative mb-3">
 								<SkillDiv>
 									<SkillImage
-										src="../media/Stevens.png"
+										src="../journal/media/Stevens.png"
 										alt="Stevens Institute of Technology"
 									/>
 									<EdSpan>
@@ -338,7 +338,7 @@ function App() {
 								<SkillDiv>
 									<SkillImage
 										id="CMU"
-										src="../media/CMU.png"
+										src="../journal/media/CMU.png"
 										alt="Carnegie Mellon University"
 									/>
 									<EdSpan> Masters of Arts in Cultural Studies </EdSpan>
@@ -383,7 +383,7 @@ function App() {
 				<ResumeSection sectionTitle="Media Journal Project" location="Projects">
 					<ProjectDiv>
 						Media Journaling Website - Personal Project: ​hosted at mmilideo.dev
-						<MediaImage src="../media/MediaJournal.png" />
+						<MediaImage src="../journal/media/MediaJournal.png" />
 						<h4>Frontend</h4>
 						<StyledHr />
 						<ProjectUL>
