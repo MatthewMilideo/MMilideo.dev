@@ -87,7 +87,21 @@ const SkillSpan = Styled.span`
 	min-height: 75px; 
 `;
 
+const EdImage = Styled(Image)`
+width: 200px; 
+height: auto; 
+margin-bottom: .5rem; 
+`;
+
+const EdImage2 = Styled(Image)`
+
+margin-bottom: .5rem; 
+width: 200px; 
+height: auto; 
+`;
+
 const EdSpan = Styled.span` 
+	margin-top: 1rem; 
 	margin-bottom: auto; 
 	min-height: 75px; 
 
@@ -137,63 +151,63 @@ const locations = [
 const skillImages = [
 	{
 		id: 1,
-		src: "../journal/media/react.png",
+		src: "../media/react.png",
 		title: "React Logo",
 		desc: "React - 2 Years"
 	},
 	{
 		id: 2,
-		src: "../journal/media/redux.png",
+		src: "../media/redux.png",
 		title: "Redux Logo",
 		desc: "Redux - 2 Years"
 	},
 	{
 		id: 3,
-		src: "../journal/media/html.png",
+		src: "../media/html.png",
 		title: "HTML Logo",
 		desc: "HTML - 3 Years"
 	},
-	{ id: 4, src: "../journal/media/css.png", title: "CSS3 Logo", desc: "CSS - 3 Years" },
+	{ id: 4, src: "../media/css.png", title: "CSS3 Logo", desc: "CSS - 3 Years" },
 	{
 		id: 5,
-		src: "../journal/media/bootstrap.svg",
+		src: "../media/bootstrap.svg",
 		title: "Bootstrap Logo",
 		desc: "Bootstrap - 1 Year"
 	},
 
 	{
 		id: 8,
-		src: "../journal/media/js.jpg",
+		src: "../media/js.jpg",
 		title: "Javascript Logo",
 		desc: "Javascript ES6 - 2.5 Years"
 	},
 	{
 		id: 9,
-		src: "../journal/media/TS.png",
+		src: "../media/TS.png",
 		title: "TS Logo",
 		desc: "Typescript - Novice"
 	},
 	{
 		id: 6,
-		src: "../journal/media/node.png",
+		src: "../media/node.png",
 		title: "Node Logo",
 		desc: "Node / Express - 1 Year"
 	},
 	{
 		id: 7,
-		src: "../journal/media/PGSQL.svg",
+		src: "../media/PGSQL.svg",
 		title: "PostgreSQL Logo",
 		desc: "Postgre / SQL - 1 Year"
 	},
 	{
 		id: 10,
-		src: "../journal/media/jest.png",
+		src: "../media/jest.png",
 		title: "Jest Logo",
 		desc: "Jest - Novice"
 	},
 	{
 		id: 11,
-		src: "../journal/media/sass.svg",
+		src: "../media/sass.svg",
 		title: "SASS Logo",
 		desc: "SASS - Novice"
 	}
@@ -202,13 +216,13 @@ const skillImages = [
 const educationImages = [
 	{
 		id: "ed-2",
-		src: "../journal/media/Stevens.png",
+		src: "../media/Stevens.png",
 		title: "Stevens Institute of Technology",
 		desc: " Bachelors of Science in CS && Bachelors of Art in Literature"
 	},
 	{
 		id: "ed-1",
-		src: "../journal/media/CMU.png",
+		src: "../media/CMU.png",
 		title: "Carnegie Mellon University",
 		desc: "Masters of Art in Cultural Studies"
 	}
@@ -229,7 +243,8 @@ function App() {
 	let mobile = false;
 	let size = useWindowSize();
 
-	size.width < 450 ? (mobile = true) : (mobile = false);
+	size.width < 450 || size.height < 600 ? (mobile = true) : (mobile = false);
+
 	console.log(size, mobile);
 
 	return (
@@ -323,8 +338,8 @@ function App() {
 						<Row>
 							<Col xs={6} sm={6} md={6} lg={6} className=" relative mb-3">
 								<SkillDiv>
-									<SkillImage
-										src="../journal/media/Stevens.png"
+									<EdImage
+										src="../media/Stevens.png"
 										alt="Stevens Institute of Technology"
 									/>
 									<EdSpan>
@@ -336,9 +351,9 @@ function App() {
 							</Col>
 							<Col xs={6} sm={6} md={6} lg={6} className=" relative mb-3">
 								<SkillDiv>
-									<SkillImage
+									<EdImage2
 										id="CMU"
-										src="../journal/media/CMU.png"
+										src="../media/CMU.png"
 										alt="Carnegie Mellon University"
 									/>
 									<EdSpan> Masters of Arts in Cultural Studies </EdSpan>
@@ -382,8 +397,16 @@ function App() {
 
 				<ResumeSection sectionTitle="Media Journal Project" location="Projects">
 					<ProjectDiv>
-						Media Journaling Website - Personal Project: ​hosted at mmilideo.dev
-						<MediaImage src="../journal/media/MediaJournal.png" />
+						<span>
+							{" "}
+							Media Journaling Website - Personal Project: ​hosted at{" "}
+							<a href="http://www.mmilideo.dev/journal/">
+								{" "}
+								mmilideo.dev/journal/
+							</a>
+						</span>
+						<br />
+						<MediaImage src="../media/MediaJournal.png" />
 						<h4>Frontend</h4>
 						<StyledHr />
 						<ProjectUL>

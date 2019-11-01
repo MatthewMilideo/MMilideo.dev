@@ -10,12 +10,13 @@ const StyledButton = Styled(Button)`
 color: black; 
 width: 100%; 
 
-
 background-color: #F3F3EF
-
 box-shadow: 0px 0px 1px 0px #979797
 border-color: #b25c45
 border-width: 0px 0px 3px 0px;  
+
+padding: .5rem; 
+margin-bottom: 1rem; 
 
 :hover{
 	color: black; 
@@ -36,6 +37,13 @@ border-width: 0px 0px 3px 0px;
 	box-shadow: 0px 2px 10px 1px #979797; !important;
 	border-color: rgba(41, 43, 44, .5); !important;
 }
+
+@media screen and ( max-height: 699px ) { 
+	padding: .25rem; 
+	margin-bottom: .5rem; 
+}
+
+
 `;
 
 export interface NavButtonInt {
@@ -49,7 +57,7 @@ export const NavButton: React.FunctionComponent<NavButtonInt> = props => {
 
 	return (
 		<NavLink to={`/${props.location}`}>
-			<StyledButton className="mb-4 p-2 ">{props.text}</StyledButton>
+			<StyledButton className="">{props.text}</StyledButton>
 		</NavLink>
 	);
 };
